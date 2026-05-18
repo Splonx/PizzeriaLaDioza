@@ -1,4 +1,4 @@
-import { Bike, Phone, ShieldCheck } from 'lucide-react'
+import { Bike, ExternalLink, Phone, ShieldCheck } from 'lucide-react'
 import { business, images } from '../data/menu'
 
 export default function DeliverySection() {
@@ -23,6 +23,22 @@ export default function DeliverySection() {
               WhatsApp
             </a>
           </div>
+
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            {business.platforms.map((platform) => (
+              <a
+                key={platform.name}
+                href={platform.url}
+                target="_blank"
+                rel="noreferrer"
+                className={`${platform.color} flex items-center justify-center gap-2 rounded-2xl px-5 py-4 font-black text-white shadow-xl transition hover:-translate-y-0.5`}
+              >
+                Commander sur {platform.name}
+                <ExternalLink size={18} />
+              </a>
+            ))}
+          </div>
+
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <p className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 font-bold">
               <Bike className="text-dioza-gold" />

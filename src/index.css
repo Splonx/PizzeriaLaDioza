@@ -8,7 +8,6 @@ html {
 
 body {
   margin: 0;
-<<<<<<< HEAD
   background: #fff7e8;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
 }
@@ -24,42 +23,13 @@ body {
 
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-black uppercase tracking-wide text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20;
-=======
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  background: #fff7e8;
-}
-
-@layer components {
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-dioza-red px-6 py-3 font-black text-white shadow-lg shadow-red-950/20 transition duration-300 hover:-translate-y-0.5 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-dioza-gold/40;
-  }
-
-  .btn-ghost {
-    @apply inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 font-black text-white backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/20;
-  }
-
-  .nav-link {
-    @apply text-sm font-bold uppercase tracking-[0.16em] text-white/70 transition hover:text-dioza-gold;
-  }
-
-  .hero-info {
-    @apply flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 text-sm font-bold text-white backdrop-blur;
-  }
-
-  .feature-strip {
-    @apply flex items-center gap-4 rounded-2xl bg-dioza-cream p-5;
->>>>>>> b71261e2b21366fe825a03d156ce099445bfac82
   }
 
   .section-pad {
     @apply py-20 sm:py-24;
   }
 
-<<<<<<< HEAD
   .eyebrow {
-=======
-  .section-eyebrow {
->>>>>>> b71261e2b21366fe825a03d156ce099445bfac82
     @apply text-sm font-black uppercase tracking-[0.22em] text-dioza-red;
   }
 
@@ -67,25 +37,18 @@ body {
     @apply mt-3 font-display text-4xl font-black leading-tight text-dioza-deep sm:text-5xl;
   }
 
-<<<<<<< HEAD
   .card {
     @apply rounded-3xl border border-zinc-200 bg-white shadow-soft;
   }
 
   .contact-line {
     @apply flex items-start gap-3 text-zinc-700;
-=======
-  .footer-line,
-  .contact-line {
-    @apply flex items-start gap-3;
->>>>>>> b71261e2b21366fe825a03d156ce099445bfac82
   }
 
   .contact-line svg {
     @apply mt-0.5 h-5 w-5 shrink-0 text-dioza-red;
   }
 
-<<<<<<< HEAD
   .floating-call {
     @apply fixed bottom-4 left-4 right-4 z-50 grid grid-cols-2 gap-3 sm:hidden;
   }
@@ -94,24 +57,3 @@ body {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-4 text-sm font-black text-white shadow-2xl;
   }
 }
-=======
-  .footer-line svg {
-    @apply mt-0.5 h-5 w-5 shrink-0 text-dioza-gold;
-  }
-
-  .fixed-call {
-    @apply fixed bottom-4 left-4 right-4 z-50 inline-flex items-center justify-center gap-2 rounded-full bg-dioza-red px-6 py-4 font-black text-white shadow-2xl shadow-red-950/30 sm:hidden;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 1ms !important;
-    transition-duration: 1ms !important;
-  }
-
-}
->>>>>>> b71261e2b21366fe825a03d156ce099445bfac82
