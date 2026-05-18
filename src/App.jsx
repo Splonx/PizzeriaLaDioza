@@ -1,13 +1,14 @@
 import { BadgeCheck, Bike, Clock, MapPin, Phone, ShoppingBag } from "lucide-react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import SectionTitle from "./components/SectionTitle";
-import PriceCard from "./components/PriceCard";
-import PizzaCard from "./components/PizzaCard";
-import MenuList from "./components/MenuList";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import MenuList from "./components/MenuList";
 import OptimizedImage from "./components/OptimizedImage";
+import PizzaCard from "./components/PizzaCard";
+import PriceCard from "./components/PriceCard";
+import SectionTitle from "./components/SectionTitle";
 import Testimonials from "./components/Testimonials";
 import WhyChooseUs from "./components/WhyChooseUs";
 import { siteImages } from "./data/images";
@@ -24,12 +25,13 @@ function ServicePill({ children }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-dioza-cream text-zinc-900">
-      <Header />
-      <main>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-dioza-cream text-zinc-900">
+        <Header />
+        <main>
         <Hero />
 
-        <section className="relative -mt-10 z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="relative z-10 mx-auto -mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-4 rounded-3xl border border-zinc-200 bg-white p-4 shadow-soft md:grid-cols-3">
             <div className="feature-strip">
               <Phone className="text-dioza-red" />
@@ -55,7 +57,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="pizzas" className="section-pad scroll-reveal">
+        <section id="pizzas" className="section-pad">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
               <SectionTitle
@@ -74,7 +76,7 @@ export default function App() {
 
         <WhyChooseUs />
 
-        <section id="tarifs" className="scroll-reveal pb-20">
+        <section id="tarifs" className="pb-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle
               eyebrow="Tarifs"
@@ -89,7 +91,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="scroll-reveal bg-white py-20">
+        <section className="bg-white py-20">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionTitle
               eyebrow="Carte des pizzas"
@@ -104,7 +106,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section-pad scroll-reveal">
+        <section className="section-pad">
           <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
             <div>
               <SectionTitle eyebrow="Autres plats" title="Pâtes, croques et desserts" />
@@ -123,7 +125,7 @@ export default function App() {
 
         <Gallery />
 
-        <section id="livraison" className="scroll-reveal overflow-hidden bg-dioza-deep py-20 text-white">
+        <section id="livraison" className="overflow-hidden bg-dioza-deep py-20 text-white">
           <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.08] p-8 shadow-2xl shadow-black/20">
               <Bike size={46} className="text-dioza-gold" />
@@ -162,7 +164,7 @@ export default function App() {
 
         <Testimonials />
 
-        <section id="adresse" className="section-pad scroll-reveal">
+        <section id="adresse" className="section-pad">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid overflow-hidden rounded-[2rem] bg-white shadow-soft lg:grid-cols-[0.82fr_1.18fr]">
               <div className="p-8 sm:p-10">
@@ -186,12 +188,13 @@ export default function App() {
             </div>
           </div>
         </section>
-      </main>
-      <Footer />
-      <a href={business.phoneHref} className="fixed-call" aria-label="Appeler Pizzeria La Dioza">
-        <Phone size={20} />
-        Appeler
-      </a>
-    </div>
+        </main>
+        <Footer />
+        <a href={business.phoneHref} className="fixed-call" aria-label="Appeler Pizzeria La Dioza">
+          <Phone size={20} />
+          Appeler
+        </a>
+      </div>
+    </ErrorBoundary>
   );
 }

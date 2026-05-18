@@ -20,7 +20,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="section-pad scroll-reveal bg-white">
+    <section className="section-pad bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>

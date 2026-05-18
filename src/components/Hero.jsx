@@ -5,8 +5,8 @@ import { business, services } from "../data/menu";
 
 export default function Hero() {
   return (
-    <section id="accueil" className="relative isolate overflow-hidden bg-dioza-deep text-white">
-      <div className="absolute inset-0 -z-10">
+    <section id="accueil" className="relative overflow-hidden bg-dioza-deep text-white">
+      <div className="absolute inset-0 z-0">
         <OptimizedImage
           src={siteImages.hero.src}
           fallback={siteImages.hero.fallback}
@@ -18,8 +18,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-dioza-deep via-dioza-deep/78 to-dioza-deep/15" />
       </div>
 
-      <div className="mx-auto grid min-h-[calc(100vh-74px)] max-w-7xl content-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.04fr_0.96fr] lg:px-8">
-        <div className="max-w-3xl animate-rise">
+      <div className="relative z-10 mx-auto grid min-h-[calc(100vh-74px)] max-w-7xl content-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.04fr_0.96fr] lg:px-8">
+        <div className="max-w-3xl">
           <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-dioza-gold/40 bg-white/10 px-4 py-2 text-sm font-semibold text-dioza-gold backdrop-blur">
             <Sparkles size={16} />
             Pizzas halal • Livraison rapide

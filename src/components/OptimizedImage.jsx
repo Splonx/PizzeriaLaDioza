@@ -8,7 +8,7 @@ export default function OptimizedImage({
   loading = "lazy",
   sizes = "100vw"
 }) {
-  const [currentSrc, setCurrentSrc] = useState(src);
+  const [currentSrc, setCurrentSrc] = useState(src || fallback);
 
   return (
     <img
@@ -19,7 +19,7 @@ export default function OptimizedImage({
       decoding="async"
       sizes={sizes}
       onError={() => {
-        if (currentSrc !== fallback) {
+        if (fallback && currentSrc !== fallback) {
           setCurrentSrc(fallback);
         }
       }}

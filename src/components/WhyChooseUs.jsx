@@ -30,7 +30,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-pad scroll-reveal bg-white">
+    <section className="section-pad bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
           <div>
