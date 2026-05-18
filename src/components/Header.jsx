@@ -34,9 +34,19 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a href={business.platforms[0].url} target="_blank" rel="noreferrer" className="hidden rounded-full bg-teal-500 px-4 py-2 text-sm font-black text-white transition hover:-translate-y-0.5 md:inline-flex">
-            Deliveroo
-          </a>
+          <div className="hidden items-center gap-2 md:flex">
+            {business.platforms.map((platform) => (
+              <a
+                key={platform.name}
+                href={platform.url}
+                target="_blank"
+                rel="noreferrer"
+                className={`${platform.color} rounded-full px-4 py-2 text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5`}
+              >
+                {platform.name}
+              </a>
+            ))}
+          </div>
           <a href={business.phoneHref} className="btn-primary hidden sm:inline-flex">
             <Phone size={18} />
             Commander
