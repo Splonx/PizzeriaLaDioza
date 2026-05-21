@@ -1,7 +1,6 @@
 import { ExternalLink, Mail, MapPin, Phone } from 'lucide-react'
-import { business } from '../data/menu'
 
-export default function Footer() {
+export default function Footer({ settings }) {
   return (
     <footer className="bg-dioza-deep text-white">
       <div className="container-page grid gap-8 py-12 md:grid-cols-[1.1fr_0.9fr_0.9fr]">
@@ -13,13 +12,13 @@ export default function Footer() {
           </p>
         </div>
         <div className="space-y-3 text-white/75">
-          <p className="flex gap-3"><Phone className="text-dioza-gold" size={20} /> {business.phone}</p>
-          <p className="flex gap-3"><MapPin className="text-dioza-gold" size={20} /> {business.address}</p>
-          <p className="flex gap-3"><Mail className="text-dioza-gold" size={20} /> {business.email}</p>
+          <p className="flex gap-3"><Phone className="text-dioza-gold" size={20} /> {settings.phone}</p>
+          <p className="flex gap-3"><MapPin className="text-dioza-gold" size={20} /> {settings.address}</p>
+          <p className="flex gap-3"><Mail className="text-dioza-gold" size={20} /> {settings.email}</p>
         </div>
         <div className="space-y-3">
-          <a href={business.phoneHref} className="btn-primary">Commander</a>
-          {business.platforms.map((platform) => (
+          <a href={settings.phoneHref} className="btn-primary">Commander</a>
+          {settings.platforms.map((platform) => (
             <a
               key={platform.name}
               href={platform.url}

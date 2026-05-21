@@ -1,7 +1,7 @@
 import { Bike, ExternalLink, Phone, ShieldCheck } from 'lucide-react'
-import { business, images } from '../data/menu'
+import { images } from '../data/menu'
 
-export default function DeliverySection() {
+export default function DeliverySection({ settings }) {
   return (
     <section id="livraison" className="overflow-hidden bg-dioza-deep py-20 text-white">
       <div className="container-page grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
@@ -11,21 +11,21 @@ export default function DeliverySection() {
             Des pizzas chaudes, livrées vite autour de Roubaix.
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/75">
-            Commandez par téléphone, précommandez votre repas ou faites livrer rapidement. La Dioza couvre Roubaix,
-            Tourcoing, Croix, Hem, Mouvaux, Wasquehal et les villes proches.
+            Commandez par téléphone, précommandez votre repas ou faites livrer rapidement. La Dioza couvre
+            {' '}{settings.deliveryZones.join(', ')} et les villes proches.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={business.phoneHref} className="btn-primary">
+            <a href={settings.phoneHref} className="btn-primary">
               <Phone size={20} />
               Commander maintenant
             </a>
-            <a href={business.whatsappHref} className="btn-secondary">
+            <a href={settings.whatsappHref} className="btn-secondary" target="_blank" rel="noreferrer">
               WhatsApp
             </a>
           </div>
 
           <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {business.platforms.map((platform) => (
+            {settings.platforms.map((platform) => (
               <a
                 key={platform.name}
                 href={platform.url}
@@ -46,7 +46,7 @@ export default function DeliverySection() {
             </p>
             <p className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-4 font-bold">
               <ShieldCheck className="text-dioza-gold" />
-              Nourriture 100% HALAL
+              {settings.halalText}
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function DeliverySection() {
             <img src={images.delivery.src} alt={images.delivery.alt} className="aspect-[16/10] w-full object-cover" loading="lazy" />
           </figure>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
-            {business.zones.map((zone) => (
+            {settings.deliveryZones.map((zone) => (
               <span key={zone} className="rounded-2xl border border-white/10 bg-white/10 p-4 text-center font-display text-2xl font-black">
                 {zone}
               </span>

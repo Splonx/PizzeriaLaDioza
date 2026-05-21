@@ -42,7 +42,7 @@ const reviews = [
   },
 ]
 
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ settings }) {
   return (
     <>
       <section className="bg-white py-20">
@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
             <p className="eyebrow">Pourquoi nous choisir ?</p>
             <h2 className="section-title">Confiance, gourmandise et rapidité.</h2>
             <p className="mt-4 text-lg leading-8 text-zinc-600">
-              La Dioza mise sur une expérience simple : une pizza généreuse, un service efficace et une cuisine 100% HALAL.
+              La Dioza mise sur une expérience simple : une pizza généreuse, un service efficace et {settings.halalText.toLowerCase()}
             </p>
             <div className="mt-8 overflow-hidden rounded-3xl shadow-soft">
               <img src={images.ambience.src} alt={images.ambience.alt} className="aspect-[16/10] w-full object-cover" loading="lazy" />

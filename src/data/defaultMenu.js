@@ -1,0 +1,43 @@
+export const categories = ['Pizzas', 'Menus', 'Pâtes', 'Desserts', 'Boissons']
+
+const images = {
+  classic: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=900&q=82',
+  meat: 'https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=900&q=82',
+  veggie: 'https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=900&q=82',
+  sea: 'https://images.pexels.com/photos/1653877/pexels-photo-1653877.jpeg?auto=compress&cs=tinysrgb&w=900&q=82',
+  menu: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=82',
+  pasta: 'https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=900&q=82',
+  dessert: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=82',
+  drink: 'https://images.unsplash.com/photo-1581006852262-e4307cf6283a?auto=format&fit=crop&w=900&q=82',
+}
+
+export const defaultProducts = [
+  { id: 'pizza-bolognaise', name: 'Bolognaise', category: 'Pizzas', price: '8,50 €', ingredients: 'Viande hachée, mozzarella, poivrons', imageUrl: images.meat, active: true },
+  { id: 'pizza-rosana', name: 'Rosana', category: 'Pizzas', price: '9,50 €', ingredients: 'Crème fraîche, bœuf haché, jambon de dinde, mozzarella', imageUrl: images.meat, active: true },
+  { id: 'pizza-vegetarienne', name: 'Végétarienne', category: 'Pizzas', price: '8,50 €', ingredients: 'Mozzarella, poivrons, champignons, oignons, olives', imageUrl: images.veggie, active: true },
+  { id: 'pizza-reine', name: 'Reine', category: 'Pizzas', price: '8,50 €', ingredients: 'Mozzarella, jambon de dinde, champignons', imageUrl: images.classic, active: true },
+  { id: 'pizza-sicilienne', name: 'Sicilienne', category: 'Pizzas', price: '8,50 €', ingredients: 'Mozzarella, anchois, olives', imageUrl: images.sea, active: true },
+  { id: 'pizza-orientale', name: 'Orientale', category: 'Pizzas', price: '9,50 €', ingredients: 'Mozzarella, merguez, oignons, poivrons', imageUrl: images.meat, active: true },
+  { id: 'pizza-margherita', name: 'Margherita', category: 'Pizzas', price: '8,00 €', ingredients: 'Mozzarella, olives', imageUrl: images.classic, active: true },
+  { id: 'pizza-chicken', name: 'Chicken', category: 'Pizzas', price: '9,50 €', ingredients: 'Mozzarella, poulet, oignons', imageUrl: images.meat, active: true },
+  { id: 'pizza-thon', name: 'Thon', category: 'Pizzas', price: '9,00 €', ingredients: 'Mozzarella, thon, oignons, poivrons', imageUrl: images.sea, active: true },
+  { id: 'pizza-carnivore', name: 'Carnivore', category: 'Pizzas', price: '10,50 €', ingredients: 'Mozzarella, viande hachée, merguez', imageUrl: images.meat, active: true },
+  { id: 'pizza-3-fromages', name: '3 Fromages', category: 'Pizzas', price: '9,00 €', ingredients: 'Mozzarella, chèvre, bleu', imageUrl: images.classic, active: true },
+  { id: 'pizza-saumon', name: 'Saumon', category: 'Pizzas', price: '10,50 €', ingredients: 'Mozzarella, saumon', imageUrl: images.sea, active: true },
+  { id: 'menu-solo', name: 'Pizza Solo', category: 'Menus', price: '8,50 €', ingredients: 'Format individuel', imageUrl: images.menu, active: true },
+  { id: 'menu-large', name: 'Pizza Large', category: 'Menus', price: '12 €', ingredients: 'À partager', imageUrl: images.menu, active: true },
+  { id: 'menu-mega', name: 'Pizza Mega', category: 'Menus', price: '17,50 €', ingredients: 'Grande faim', imageUrl: images.menu, active: true },
+  { id: 'menu-deluxe', name: 'Menu Deluxe', category: 'Menus', price: '12 €', ingredients: 'Pizza solo + dessert + boisson 33cl', imageUrl: images.menu, active: true },
+  { id: 'menu-3-solo', name: 'Menu 3 Solo', category: 'Menus', price: '20 €', ingredients: 'Idéal à plusieurs', imageUrl: images.menu, active: true },
+  { id: 'menu-2-mega', name: 'Menu 2 Mega', category: 'Menus', price: '29,90 €', ingredients: 'Duo généreux', imageUrl: images.menu, active: true },
+  { id: 'menu-3-large', name: 'Menu 3 Large', category: 'Menus', price: '29,90 €', ingredients: 'Repas convivial', imageUrl: images.menu, active: true },
+  { id: 'pates-penne-box', name: 'Penne box', category: 'Pâtes', price: '7,50 €', ingredients: '', imageUrl: images.pasta, active: true },
+  { id: 'pates-tagliatelles', name: 'Tagliatelles gratinées', category: 'Pâtes', price: '9,50 €', ingredients: '', imageUrl: images.pasta, active: true },
+  { id: 'dessert-tiramisu', name: 'Tiramisu', category: 'Desserts', price: '3,20 €', ingredients: '', imageUrl: images.dessert, active: true },
+  { id: 'dessert-croque-monsieur', name: 'Croque Monsieur', category: 'Desserts', price: '3 €', ingredients: '', imageUrl: images.dessert, active: true },
+  { id: 'dessert-croque-saumon', name: 'Croque Saumon', category: 'Desserts', price: '3,50 €', ingredients: '', imageUrl: images.dessert, active: true },
+  { id: 'boisson-soda', name: 'Soda 33cl', category: 'Boissons', price: '1,50 €', ingredients: '', imageUrl: images.drink, active: true },
+  { id: 'boisson-bouteille-15', name: 'Bouteille 1,5L', category: 'Boissons', price: '3 €', ingredients: '', imageUrl: images.drink, active: true },
+  { id: 'boisson-bouteille-2', name: 'Bouteille 2L', category: 'Boissons', price: '3,50 €', ingredients: '', imageUrl: images.drink, active: true },
+  { id: 'boisson-eau', name: 'Eau', category: 'Boissons', price: '1 €', ingredients: '', imageUrl: images.drink, active: true },
+]

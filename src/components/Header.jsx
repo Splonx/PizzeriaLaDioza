@@ -1,6 +1,5 @@
 import { Menu, Phone, X } from 'lucide-react'
 import { useState } from 'react'
-import { business } from '../data/menu'
 
 const links = [
   { href: '#menus', label: 'Menus' },
@@ -9,7 +8,7 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ]
 
-export default function Header() {
+export default function Header({ settings }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -35,7 +34,7 @@ export default function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden items-center gap-2 md:flex">
-            {business.platforms.map((platform) => (
+            {settings.platforms.map((platform) => (
               <a
                 key={platform.name}
                 href={platform.url}
@@ -47,7 +46,7 @@ export default function Header() {
               </a>
             ))}
           </div>
-          <a href={business.phoneHref} className="btn-primary hidden sm:inline-flex">
+          <a href={settings.phoneHref} className="btn-primary hidden sm:inline-flex">
             <Phone size={18} />
             Commander
           </a>
@@ -76,7 +75,7 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            {business.platforms.map((platform) => (
+            {settings.platforms.map((platform) => (
               <a
                 key={platform.name}
                 href={platform.url}
